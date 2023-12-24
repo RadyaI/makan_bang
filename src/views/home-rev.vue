@@ -56,6 +56,7 @@
         margin-top: 50px;
         margin-left: 50px;
         width: 100px;
+        position: fixed;
     }
 
     .circle-top {
