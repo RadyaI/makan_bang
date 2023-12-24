@@ -1,5 +1,5 @@
 <template>
-    <div class="circle-top">
+    <!-- <div class="circle-top">
         <div class="circle1"></div>
         <div class="circle1"></div>
         <div class="circle1"></div>
@@ -15,7 +15,8 @@
         <div class="circle-bottom-1"></div>
         <div class="circle-bottom-1"></div>
         <div class="circle-bottom-1"></div>
-    </div>
+    </div> -->
+    <div></div>
 </template>
 <style scoped>
 ::root {
