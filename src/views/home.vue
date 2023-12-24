@@ -1,5 +1,5 @@
 <template>
-    <!-- <div class="circle-top">
+    <div class="circle-top">
         <div class="circle1"></div>
         <div class="circle1"></div>
         <div class="circle1"></div>
@@ -15,10 +15,11 @@
         <div class="circle-bottom-1"></div>
         <div class="circle-bottom-1"></div>
         <div class="circle-bottom-1"></div>
-    </div> -->
+    </div>
     <div></div>
 </template>
 <style scoped>
+/* @import url('https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css'); */
 ::root {
     --primary: #190482;
     --secondary: #C2D9FF;
