@@ -245,7 +245,7 @@ export default {
         this.isBouncing = true
         setInterval(() => {
             this.addShakeClass()
-        }, 4000)
+        }, 2000)
         setInterval(() => {
             this.addBounceClass()
         }, 1000)
@@ -255,7 +255,7 @@ export default {
             this.isTada = true
             setTimeout(() => {
                 this.isTada = false
-            }, 2000)
+            }, 1900)
         },
         addBounceClass() {
             this.isBouncing = true
