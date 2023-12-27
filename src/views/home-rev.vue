@@ -80,6 +80,7 @@
             </svg>
 
         </div>
+        <device-alert></device-alert>
     </div>
 </template>
 
@@ -232,8 +233,12 @@
 
 <script>
 import swal from 'sweetalert'
+import deviceAlert from '@/components/deviceAlert.vue'
 export default {
     name: 'app',
+    components: {
+        'device-alert': deviceAlert
+    },
     data() {
         return {
             isBouncing: false,
@@ -241,6 +246,7 @@ export default {
         }
     },
     mounted() {
+    // alert(window.innerWidth)
         this.isTada = true
         this.isBouncing = true
         setInterval(() => {

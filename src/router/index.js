@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import home from '../views/home.vue'
 import homeRev from '../views/home-rev.vue'
 import pickMakan from '../views/pickMakan.vue'
+import deviceError from '../views/deviceError.vue'
 
 const routes = [
   {
@@ -10,12 +10,12 @@ const routes = [
     component: homeRev
   },
   {
-    path: '/fail',
-    component: home
-  },
-  {
     path: '/pilih-makan',
     component: pickMakan
+  },
+  {
+    path: '/device-error',
+    component: deviceError
   }
 ]
 
