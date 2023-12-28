@@ -17,7 +17,7 @@ export default {
     },
     methods: {
         showAlert() {
-            if (window.innerHeight > 1350) {
+            if (window.innerWidth > 1350) {
                 swal({
                     icon: 'error',
                     title: 'Waduh, Style webnya tidak support device mu hehe',
