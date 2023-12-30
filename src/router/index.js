@@ -1,13 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import homeRev from '../views/home-rev.vue'
+import landingPage from '../views/landingPage.vue'
 import pickMakan from '../views/pickMakan.vue'
 import deviceError from '../views/deviceError.vue'
+import home from '../views/page/home.vue'
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: homeRev
+    component: landingPage
   },
   {
     path: '/pilih-makan',
@@ -16,6 +16,10 @@ const routes = [
   {
     path: '/device-error',
     component: deviceError
+  },
+  {
+    path: '/home',
+    component: home
   }
 ]
 

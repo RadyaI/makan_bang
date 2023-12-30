@@ -91,7 +91,7 @@
     --circle: #8E8FFA;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 520px) {
     .hide-mobile {
         display: none;
     }
@@ -246,7 +246,7 @@ export default {
         }
     },
     mounted() {
-    // alert(window.innerWidth)
+        // alert(window.innerWidth)
         this.isTada = true
         this.isBouncing = true
         setInterval(() => {
@@ -278,11 +278,7 @@ export default {
             }).then(
                 (makan) => {
                     if (makan) {
-                        swal({
-                            icon: 'error',
-                            title: 'Sabar Belum Jadi!',
-                            button: 'OKE'
-                        })
+                        this.$router.push('/home')
                     } else {
                         swal({
                             title: 'Ya udah'
