@@ -30,17 +30,18 @@
                 <img :src="require(`./images/${i.img}`)" class="nyemil-img" alt="">
                 <div class="nyemil-desc">
                     <p class="nyemil-title">
-                        {{ i.title }} <br> {{ i.price }}
+                        {{ i.title }}
                     </p>
                     <i class="fa-solid fa-heart nyemil-favorit"></i>
                 </div>
+                <p class="nyemil-price">{{ i.price }}</p>
             </div>
         </div>
 
         <div class="footer">
             <p>Made By Radya With Haha</p>
         </div>
-
+        <hpajaplis></hpajaplis>
     </div>
 </template>
 <style scoped>
@@ -160,7 +161,7 @@
 }
 
 .food-favorit {
-    margin-right: 7px;
+    margin-right: 12px;
 }
 
 .nyemil-text {
@@ -214,6 +215,15 @@
     margin-left: 5px;
 }
 
+.nyemil-favorit {
+    margin-right: 12px;
+}
+.nyemil-price {
+    font-weight: bolder;
+    font-size: 13px;
+    margin-top: 5px;
+    margin-left: 4px;
+}
 .footer {
     color: #C2D9FF;
     margin-top: 20px;
@@ -230,9 +240,13 @@
 <script>
 import swal from 'sweetalert'
 import bananacat from './images/bananacat.png'
+import hpajaplis from '@/components/bukaDiHpAjaPlis.vue'
 
 export default {
     name: 'app',
+    components: {
+        hpajaplis: hpajaplis
+    },
     data() {
         return {
             searchFood: '',
