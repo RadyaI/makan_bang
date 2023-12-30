@@ -7,11 +7,12 @@
         <div class="desc">
             <p class="text desc-text-1">Makan Bang</p>
             <p class="text desc-text-2">Makanan Yang Deket Aja</p>
-            <input type="text" v-model="searchFood" class="search text" placeholder="Ga tau mau cari apa...">
+            <input type="text" v-model="searchFood" @change="notFound" class="search text"
+                placeholder="Ga tau mau cari apa...">
         </div>
         <div class="food">
+            <img src="./images/bananacatcry.png" v-if="this.foodLength === 0" alt="">
             <div class="food-card" @click="sabar" v-for="i in makanFilter" :key="i.title">
-                <!-- <h2 v-if="makanFilter.length === 0">Wah ga ada kayanya</h2> -->
                 <img :src="require(`./images/${i.img}`)" class="food-img" alt="">
                 <div class="food-desc">
                     <p class="food-title">
@@ -236,10 +237,12 @@
     align-items: center;
     border-radius: 15px 15px 0 0;
     background-color: #190482;
+    /* position: fixed;
+    bottom: 0; */
 }
 
 @media only screen and (min-height: 900px) {
-    .footer{
+    .footer {
         position: absolute;
         bottom: 0;
     }
@@ -259,6 +262,7 @@ export default {
     data() {
         return {
             searchFood: '',
+            foodLength: '',
             food: [
                 {
                     title: 'Mie Ayam',
@@ -305,6 +309,13 @@ export default {
             return foodList
         }
     },
+    watch: {
+        makanFilter(howManyFood) {
+            this.foodLength = howManyFood.length
+        }
+    },
+    mounted() {
+    },
     methods: {
         sabar() {
             swal({
@@ -313,6 +324,17 @@ export default {
                 button: 'HUUU',
                 // timer: 2000
             })
+        },
+        notFound() {
+            if (this.foodLength === 0) {
+                swal({
+                    icon: false,
+                    title: 'Hmmm sepertinya tidak adaa',
+                    timer: 2000,
+                    button: false
+                })
+                this.searchFood = ''
+            }
         }
     }
 }
