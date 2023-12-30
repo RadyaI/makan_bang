@@ -13,7 +13,7 @@ export default {
         }
     },
     mounted() {
-        this.showAlert()
+        // this.showAlert()
     },
     methods: {
         showAlert() {
