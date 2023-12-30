@@ -218,12 +218,14 @@
 .nyemil-favorit {
     margin-right: 12px;
 }
+
 .nyemil-price {
     font-weight: bolder;
     font-size: 13px;
     margin-top: 5px;
     margin-left: 4px;
 }
+
 .footer {
     color: #C2D9FF;
     margin-top: 20px;
@@ -234,6 +236,13 @@
     align-items: center;
     border-radius: 15px 15px 0 0;
     background-color: #190482;
+}
+
+@media only screen and (min-height: 900px) {
+    .footer{
+        position: absolute;
+        bottom: 0;
+    }
 }
 </style>
 
