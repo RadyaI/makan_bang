@@ -63,6 +63,10 @@
 </template>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap');
+*{
+    font-family: 'Rubik Doodle Shadow';
+}
 ::root {
     --primary: #190482;
     --secondary: #C2D9FF;
@@ -111,7 +115,7 @@
         width: fit-content;
         height: auto;
         /* border: 1px solid black; */
-        margin-top: 80px;
+        margin-top: 50px;
         margin-left: 30px;
     }
 

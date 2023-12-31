@@ -3,6 +3,7 @@ import landingPage from '../views/landingPage.vue'
 import pickMakan from '../views/pickMakan.vue'
 import deviceError from '../views/deviceError.vue'
 import home from '../views/page/home.vue'
+import foodDetail from '../views/page/foodDetail.vue'
 
 const routes = [
   {
@@ -20,6 +21,10 @@ const routes = [
   {
     path: '/home',
     component: home
+  },
+  {
+    path: '/food/:id/:food',
+    component: foodDetail
   }
 ]
 

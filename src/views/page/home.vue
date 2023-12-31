@@ -4,14 +4,12 @@
             <div class="cart" @click="sabar"><i class="fa-solid fa-cart-shopping"></i></div>
             <div class="favorit" @click="sabar"><i class="fa-solid fa-heart"></i></div>
         </div>
-        <div class="desc">
+        <div class="header">
             <p class="text desc-text-1">Makan Bang</p>
             <p class="text desc-text-2">Makanan Yang Deket Aja</p>
-            <input type="text" v-model="searchFood" @change="notFound" class="search text"
-                placeholder="Ga tau mau cari apa...">
         </div>
         <div class="food">
-            <img src="./images/bananacatcry.png" v-if="this.foodLength === 0" alt="">
+            <!-- <img src="./images/bananacatcry.png" v-if="this.foodLength === 0" alt="">
             <div class="food-card" @click="sabar" v-for="i in makanFilter" :key="i.title">
                 <img :src="require(`./images/${i.img}`)" class="food-img" alt="">
                 <div class="food-desc">
@@ -23,7 +21,8 @@
                 <p class="food-price">
                     {{ i.price }}
                 </p>
-            </div>
+            </div> -->
+            <foodCard></foodCard>
         </div>
         <div class="nyemil-text text" style="margin-top:10px ;">Nyemil</div>
         <div class="nyemil">
@@ -81,9 +80,9 @@
     cursor: pointer;
 }
 
-.desc {
+.header {
     width: 100%;
-    height: 120px;
+    height: auto;
     /* border: 1px solid black; */
 }
 
@@ -101,15 +100,16 @@
     font-size: 25px;
 }
 
-.search {
+/* .search {
     margin-top: 15px;
     border: 1px solid #190482;
-    padding: 7px 66px;
+    padding: 7px;
     border-radius: 10px;
     color: #190482;
-}
+}    */
 
-.food {
+/* Food Style */
+/* .food {
     width: 100%;
     height: auto;
     margin-top: 15px;
@@ -131,7 +131,7 @@
     border-radius: 10px 10px 10px 10px;
     width: 87%;
     height: 68%;
-    /* border: 1px solid black; */
+    border: 1px solid black;
     margin-left: 10px;
     margin-top: 10px;
     border: none;
@@ -142,7 +142,7 @@
     color: black;
     width: 100%;
     height: auto;
-    /* border: 1px solid orange; */
+    border: 1px solid orange;
     display: flex;
     justify-content: space-between;
 }
@@ -163,8 +163,9 @@
 
 .food-favorit {
     margin-right: 12px;
-}
+} */
 
+/* Food style end */
 .nyemil-text {
     font-weight: bolder;
     font-size: 25px;
@@ -253,11 +254,13 @@
 import swal from 'sweetalert'
 import bananacat from './images/bananacat.png'
 import hpajaplis from '@/components/bukaDiHpAjaPlis.vue'
+import foodCard from '@/components/foodCard.vue'
 
 export default {
     name: 'app',
     components: {
-        hpajaplis: hpajaplis
+        hpajaplis: hpajaplis,
+        foodCard: foodCard
     },
     data() {
         return {
