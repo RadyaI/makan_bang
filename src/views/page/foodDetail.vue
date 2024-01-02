@@ -15,20 +15,25 @@
                     <div class="desc">{{ foodData.desc }}</div>
                 </div>
                 <div class="price">{{ foodData.price }}</div>
-                <div class="center">
+                <div class="titip">
                     <div class="save"><i @click="sabar" class="fa-regular fa-bookmark"></i></div>
                     <button class="button" @click="sabar">Titip</button>
                 </div>
             </div>
         </div>
+        <bukaDiHpAjaPlisVue></bukaDiHpAjaPlisVue>
     </div>
 </template>
 
 <script>
 import swal from 'sweetalert'
 import bananacat from '../page/images/bananacatcry.png'
+import bukaDiHpAjaPlisVue from '@/components/bukaDiHpAjaPlis.vue'
 
 export default {
+    components: {
+        bukaDiHpAjaPlisVue: bukaDiHpAjaPlisVue
+    },
     data() {
         return {
             foodData: {},
@@ -80,6 +85,7 @@ export default {
     font-size: 30px;
     margin-top: 40px;
     margin-left: 35px;
+    cursor: pointer;
     color: #190482;
 }
 
@@ -97,13 +103,18 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex: 0 0 auto;
+    resize: none;
 }
 
 .food-img {
-    width: 60%;
-    height: 60%;
+    width: 260px;
+    height: 260px;
     /* border: 1px solid black; */
     border-radius: 50%;
+    display: flex;
+    resize: none;
+    /* flex: 0 0 auto; */
 }
 
 img {
@@ -138,7 +149,7 @@ img {
     text-overflow: ellipsis;
     /* white-space: nowrap; */
     width: 90%;
-    height: 100px;
+    height: 70px;
     /* border: 1px solid red; */
     text-align: center;
     color: grey;
@@ -154,7 +165,7 @@ img {
     font-size: 30px;
     font-weight: bolder;
     margin-left: 20px;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 
 .button {
@@ -165,10 +176,11 @@ img {
     border-radius: 20px;
     padding: 5px 100px;
     border: none;
-    margin-top: 10px;
+    cursor: pointer;
 }
 
 .save {
+    cursor: pointer;
     margin-top: 10px;
     margin-right: 30px;
     font-size: 25px;
@@ -182,7 +194,14 @@ img {
     box-shadow: -5px 5px 10px #e8e8e8,
         5px -5px 10px #ffffff;
 }
-
+.titip{
+    display: flex;
+    position: fixed;
+    bottom: 5%;
+    left: 0;
+    right: 0;
+    justify-content: center;
+}
 .center {
     display: flex;
     justify-content: center;
